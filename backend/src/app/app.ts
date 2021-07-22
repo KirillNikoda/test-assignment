@@ -3,9 +3,9 @@ import * as express from 'express';
 import * as cors from 'cors';
 
 class App {
-  public app: express.Application;
+  private app: express.Application;
 
-  public port: number;
+  private port: number;
 
   constructor(controllers, port) {
     this.app = express();

@@ -8,11 +8,14 @@ dotenv.config();
 
 const start = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true });
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
     console.log('connected to DB');
 
-    const app = new App([new ProductController()], 5000);
+    const app = new App([new ProductController()], 1000);
     app.listen();
   } catch (e) {
     console.log(e.message);
