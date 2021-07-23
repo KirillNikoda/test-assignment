@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { ProductPage } from './pages/ProductPage';
+import { AdminPage } from './pages/AdminPage';
 
 const useStyles = makeStyles({
   root: {
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/product/:id">
               <ProductPage />
+            </Route>
+            <Route exact path="/admin">
+              <AdminPage />
             </Route>
           </Switch>
         </Box>

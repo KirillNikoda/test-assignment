@@ -4,3 +4,9 @@ export interface IProduct {
   price: number;
   remainingCount: number;
 }
+
+export interface IUpdateProduct {
+  name: string;
+  price: number;
+  remainingCount: number;
+}

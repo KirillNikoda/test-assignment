@@ -45,6 +45,8 @@ class ProductController {
   private async updateProduct(req: express.Request, res: express.Response) {
     const properties = ['name', 'price', 'remainingCount'];
     const bodyProperties = Object.keys(req.body);
+    console.log(req.body);
+
     console.log(bodyProperties, properties);
 
     let isValid: boolean = true;

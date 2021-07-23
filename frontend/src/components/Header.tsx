@@ -5,8 +5,11 @@ export const Header = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Link to={'/'} style={{ color: 'white', textDecoration: 'none' }}>
+        <Link to={'/'} style={{ color: 'white', textDecoration: 'none', marginRight: '10px' }}>
           <Typography variant="h6">Products</Typography>
+        </Link>
+        <Link to={'/admin'} style={{ color: 'white', textDecoration: 'none' }}>
+          <Typography variant="h6">Admin</Typography>
         </Link>
       </Toolbar>
     </AppBar>

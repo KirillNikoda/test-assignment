@@ -15,7 +15,7 @@ const start = async () => {
 
     console.log('connected to DB');
 
-    const app = new App([new ProductController()], 1000);
+    const app = new App([new ProductController()], 5000);
     app.listen();
   } catch (e) {
     console.log(e.message);
